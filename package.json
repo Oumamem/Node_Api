@@ -1,0 +1,19 @@
+{
+  "name": "nodej_api",
+  "version": "1.0.0",
+  "description": "tester des apis",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oumamem/Node_Api.git"
+  },
+  "author": "oumaima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oumamem/Node_Api/issues"
+  },
+  "homepage": "https://github.com/Oumamem/Node_Api#readme"
+}
