@@ -4,7 +4,7 @@
   "description": "tester des apis",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/Oumamem/Node_Api/issues"
   },
-  "homepage": "https://github.com/Oumamem/Node_Api#readme"
+  "homepage": "https://github.com/Oumamem/Node_Api#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
