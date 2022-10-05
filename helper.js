@@ -1,4 +1,4 @@
-const pokemons = require("./mock-pockemon")
+const pokemons = require("./src/db/mock-pockemon")
 
 exports.success = (message, data) => {
     return {message, data}
