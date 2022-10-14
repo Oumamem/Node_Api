@@ -26,5 +26,5 @@ app.use(({res})=>{
     const message = "la page est introuvable"
     res.status(404).json(message);
   });
-app.listen(port, () => console.log('Notre application Nodejs démarrre ! '))
+app.listen(port, () => console.log(`Server is listening on port ${port}`))
 

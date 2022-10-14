@@ -25,7 +25,7 @@ module.exports = (app) => {
         if(error instanceof UniqueConstraintError){
             return res.status(400).json({message: error.message, data: error})
         }
-        message= "le pokemon ne peut pas être modifié pour le moment, réessayez plustard",
+        message= `le pokemon ne peut pas être modifié pour le moment, réessayez plustard `,
         res.status(500).json({message, data: error})
       })
   })
