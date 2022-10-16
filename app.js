@@ -20,5 +20,11 @@ require('./src/routes/findPokemonById')(app)
 require('./src/routes/createPokemon')(app)
 require('./src/routes/updatePokemon')(app)
 require('./src/routes/deletePokemon')(app)
-app.listen(port, () => console.log('Notre application Nodejs démarrre ! '))
+require('./src/routes/login')(app)
+
+app.use(({res})=>{
+    const message = "la page est introuvable"
+    res.status(404).json(message);
+  });
+app.listen(port, () => console.log(`Server is listening on port ${port}`))
 
