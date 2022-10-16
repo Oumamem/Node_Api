@@ -20,7 +20,7 @@ require('./src/routes/findPokemonById')(app)
 require('./src/routes/createPokemon')(app)
 require('./src/routes/updatePokemon')(app)
 require('./src/routes/deletePokemon')(app)
-
+require('./src/routes/login')(app)
 
 app.use(({res})=>{
     const message = "la page est introuvable"
