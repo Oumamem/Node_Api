@@ -4,17 +4,23 @@ module.exports = (app) => {
   app.get('/api/pokemons', (req, res) => {
     if(req.query.name){
         const name= req.query.name
-        Pokemon.findAll(
+        const limit= parseInt(req.query.lim) || 5
+        if(name.length < 2){
+          message = "longuer n'est pas suffisante"
+          return res.status(500).json(message)
+        }
+        Pokemon.findAndCountAll(
           { where: { 
             name: {
                [Op.like]: `%${name}%`
             } 
           },
-          limit : 2
-    })
-        .then(pokemons => {
-            const message = `C'est le Pokemon voulu nommé : ${name}`
-            res.json({ message, data: pokemons })
+          order: ['name'],  
+          limit: limit
+        })
+        .then(({count, rows}) => {
+            const message = `la liste des pokemons contenant: ${name}, contient ${count} pokemon(s)`
+            res.json({ message, data: rows })
           })
     }else{
         Pokemon.findAll()
